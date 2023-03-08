@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".BattleshipApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BattleshipAndroid"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BattleshipAndroid">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".credentials.register.RegisterActivity"
+            android:exported="false"
+            android:label="@string/app_register_screen_title"
+            android:theme="@style/Theme.BattleshipAndroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".credentials.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/app_login_screen_title"
+            android:theme="@style/Theme.BattleshipAndroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".users.ranking.RakingListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.author.AuthorActivity"
+            android:exported="false"
+            android:label="@string/app_author_screen_title"
+            android:theme="@style/Theme.BattleshipAndroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".users.listAuthors.AuthorsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lobby.LobbyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.player.PlayerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BattleshipAndroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+</manifest>
